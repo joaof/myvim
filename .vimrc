@@ -79,3 +79,7 @@ endif
 " History
 set history=1000
 
+" Maps
+nnoremap j gj
+nnoremap k gk
+
