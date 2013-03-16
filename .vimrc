@@ -30,6 +30,7 @@ if !&sidescrolloff
 endif
 set display+=lastline
 set smartcase
+set ignorecase
 set showcmd
 set hidden
 set wildmenu
@@ -82,4 +83,5 @@ set history=1000
 " Maps
 nnoremap j gj
 nnoremap k gk
+nnoremap <silent> <C-L> :set hlsearch!<CR>
 
