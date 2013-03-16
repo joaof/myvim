@@ -34,6 +34,8 @@ set ignorecase
 set showcmd
 set hidden
 set wildmenu
+set list
+set listchars=tab:▸\ ,eol:¬
 
 " Backup / Undo / Swap
 let s:dir = '~/.vimdata' 
