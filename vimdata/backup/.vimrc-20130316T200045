@@ -30,27 +30,27 @@ if !&sidescrolloff
 endif
 set display+=lastline
 set smartcase
-set ignorecase
 set showcmd
 set hidden
 set wildmenu
-set list
-set listchars=tab:▸\ ,eol:¬
 
 " Backup / Undo / Swap
-let s:dir = '~/.vim/vimdata' 
-if &directory =~# '^\.,'
-    let &directory = expand(s:dir) . '/swap/,' . &directory
-endif
-if &backupdir =~# '^\.,'
-    let &backupdir = expand(s:dir) . '/backup/,' . &backupdir
-endif
-if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
-    let &undodir = expand(s:dir) . '/undo/,' . &undodir
+let s:dir = '~/.vimdata' 
+if isdirectory(expand(s:dir))
+  if &directory =~# '^\.,'
+    let &directory = expand(s:dir) . '/swap//,' . &directory
+  endif
+  if &backupdir =~# '^\.,'
+    let &backupdir = expand(s:dir) . '/backup//,' . &backupdir
+  endif
+  if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
+    let &undodir = expand(s:dir) . '/undo//,' . &undodir
+  endif
 endif
 if exists('+undofile')
   set undofile
 endif
+set backup
 au BufWritePre * let &bex = '-' . strftime("%Y%m%dT%H%M%S")
 
 " Shortcuts
@@ -81,9 +81,4 @@ endif
 
 " History
 set history=1000
-
-" Maps
-nnoremap j gj
-nnoremap k gk
-nnoremap <silent> <C-L> :set hlsearch!<CR>
 
