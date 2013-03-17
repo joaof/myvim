@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 " Pathogen
 call pathogen#infect() 
 
