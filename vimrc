@@ -1,3 +1,4 @@
+set nocompatible
 scriptencoding utf-8
 
 " Pathogen
@@ -36,8 +37,10 @@ set ignorecase
 set showcmd
 set hidden
 set wildmenu
-set list
+set nowrap
+set nolist
 set listchars=tab:▸\ ,eol:¬
+set path+=**
 
 " Backup / Undo / Swap
 let s:dir = '~/.vim/vimdata' 
@@ -55,9 +58,14 @@ if exists('+undofile')
 endif
 au BufWritePre * let &bex = '-' . strftime("%Y%m%dT%H%M%S")
 
-" Shortcuts
+" Maps
 cmap cd. cd %:p:h
 cmap lcd. lcd %:p:h
+cmap acki Ack -i 
+cmap mkf make %:p
+cmap mkp make
+map <F4> :cnext<CR>
+map <S-F4> :cprevious<CR>
 
 " Status line
 set laststatus=2
@@ -88,4 +96,7 @@ set history=1000
 nnoremap j gj
 nnoremap k gk
 nnoremap <silent> <C-L> :set hlsearch!<CR>
+
+" Colorscheme
+colorscheme peachpuff
 
