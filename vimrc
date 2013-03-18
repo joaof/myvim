@@ -58,12 +58,15 @@ if exists('+undofile')
 endif
 au BufWritePre * let &bex = '-' . strftime("%Y%m%dT%H%M%S")
 
-" Maps
+" Maps / Leader
 cmap cd. cd %:p:h
 cmap lcd. lcd %:p:h
 cmap acki Ack -i 
 cmap mkf make %:p
 cmap mkp make
+nnoremap j gj
+nnoremap k gk
+nnoremap <silent> <C-L> :set hlsearch!<CR>
 map <F4> :cnext<CR>
 map <S-F4> :cprevious<CR>
 
@@ -93,9 +96,6 @@ endif
 set history=1000
 
 " Maps
-nnoremap j gj
-nnoremap k gk
-nnoremap <silent> <C-L> :set hlsearch!<CR>
 
 " Colorscheme
 colorscheme peachpuff
