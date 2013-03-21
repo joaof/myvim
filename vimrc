@@ -62,6 +62,7 @@ au BufWritePre * let &bex = '-' . strftime("%Y%m%dT%H%M%S")
 cmap cd. cd %:p:h
 cmap lcd. lcd %:p:h
 cmap acki Ack -i 
+cmap ackf AckFile -i 
 cmap mkf make %:p
 cmap mkp make
 nnoremap j gj
