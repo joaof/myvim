@@ -1,6 +1,5 @@
 set nocompatible
 scriptencoding utf-8
-set encoding=utf-8
 
 " Pathogen
 call pathogen#infect() 
