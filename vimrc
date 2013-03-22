@@ -1,5 +1,6 @@
 set nocompatible
 scriptencoding utf-8
+set encoding=utf-8
 
 " Pathogen
 call pathogen#infect() 
@@ -39,8 +40,9 @@ set hidden
 set wildmenu
 set nowrap
 set nolist
-set listchars=tab:▸\ ,eol:¬
+set listchars=tab:►\ ,eol:¬
 set path+=**
+set switchbuf=useopen
 
 " Backup / Undo / Swap
 let s:dir = '~/.vim/vimdata' 
@@ -88,7 +90,7 @@ endif
 
 " Font
 if has('win32')
-    set guifont=Ubuntu_Mono:h11:cANSI
+    set guifont=Consolas:h11:cANSI
 else
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
 endif
