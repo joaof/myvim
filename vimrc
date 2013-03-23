@@ -1,4 +1,5 @@
 set nocompatible
+set encoding=utf-8
 scriptencoding utf-8
 
 " Pathogen
@@ -41,6 +42,7 @@ set nowrap
 set nolist
 set listchars=tab:▸\ ,eol:¬
 set path+=**
+set cursorline
 
 " Backup / Undo / Swap
 let s:dir = '~/.vim/vimdata' 
@@ -96,8 +98,10 @@ endif
 " History
 set history=1000
 
-" Maps
-
 " Colorscheme
-colorscheme peachpuff
+let g:solarized_contrast="high"    "default value is normal
+let g:solarized_visibility="low"    "default value is normal
+let g:solarized_menu=0
+set background=light
+colorscheme solarized
 
