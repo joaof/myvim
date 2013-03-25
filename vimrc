@@ -103,8 +103,14 @@ set history=1000
 
 " Colorscheme
 let g:solarized_contrast="high"    "default value is normal
-let g:solarized_visibility="low"    "default value is normal
+let g:solarized_visibility="low"   "default value is normal
 let g:solarized_menu=0
 set background=light
 colorscheme solarized
+
+" ctrlp options
+let g:ctrlp_working_path_mode = ''
+let g:ctrlp_custom_ignore = {
+    \ 'file': '\v\.(ali|keep|o)$',
+    \ }
 
