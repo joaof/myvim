@@ -74,6 +74,9 @@ nnoremap k gk
 nnoremap <silent> <C-L> :set hlsearch!<CR>
 map <F4> :cnext<CR>
 map <S-F4> :cprevious<CR>
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
 
 " Status line
 set laststatus=2
