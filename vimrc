@@ -1,5 +1,6 @@
 set nocompatible
 scriptencoding utf-8
+set encoding=utf-8
 
 " Pathogen
 call pathogen#infect() 
@@ -31,13 +32,17 @@ endif
 if !&sidescrolloff
   set sidescrolloff=5
 endif
-set display+=lastline
 set smartcase
 set ignorecase
 set showcmd
 set hidden
 set wildmenu
 set nowrap
+set path+=**
+
+" Appearance
+set cursorline
+set display+=lastline
 set nolist
 set listchars=tab:►\ ,eol:¬
 set path+=**
@@ -71,6 +76,9 @@ nnoremap k gk
 nnoremap <silent> <C-L> :set hlsearch!<CR>
 map <F4> :cnext<CR>
 map <S-F4> :cprevious<CR>
+noremap <C-S> :update<CR>
+vnoremap <C-S> <C-C>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
 
 " Status line
 set laststatus=2
@@ -89,7 +97,7 @@ endif
 
 " Font
 if has('win32')
-    set guifont=Consolas:h11:cANSI
+    set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 else
     set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
 endif
@@ -97,8 +105,16 @@ endif
 " History
 set history=1000
 
-" Maps
-
 " Colorscheme
-colorscheme peachpuff
+let g:solarized_contrast="high"    "default value is normal
+let g:solarized_visibility="low"   "default value is normal
+let g:solarized_menu=0
+set background=light
+colorscheme solarized
+
+" ctrlp options
+let g:ctrlp_working_path_mode = ''
+let g:ctrlp_custom_ignore = {
+    \ 'file': '\v\.(ali|keep|o)$',
+    \ }
 
