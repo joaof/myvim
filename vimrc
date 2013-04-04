@@ -79,6 +79,10 @@ map <S-F4> :cprevious<CR>
 noremap <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
+nmap <C-tab> :bn<CR>
+imap <C-tab> <ESC>:bn<CR>i
+nmap <C-S-tab> :bn<CR>
+imap <C-S-tab> <ESC>:bn<CR>i
 
 " Status line
 set laststatus=2
