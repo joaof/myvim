@@ -1,3 +1,4 @@
+" Essentials
 set nocompatible
 scriptencoding utf-8
 set encoding=utf-8
@@ -61,6 +62,9 @@ if exists('+undodir') && &undodir =~# '^\.\%(,\|$\)'
 endif
 if exists('+undofile')
   set undofile
+endif
+if exists('+backup')
+  set backup
 endif
 au BufWritePre * let &bex = '-' . strftime("%Y%m%dT%H%M%S")
 
