@@ -73,8 +73,8 @@ cmap cd. cd %:p:h
 cmap lcd. lcd %:p:h
 cmap acki Ack -i 
 cmap ackf AckFile -i 
-cmap mkf make %:p
-cmap mkp make
+cmap mkf wall \| make %:p
+cmap mkp wall \| make
 nnoremap j gj
 nnoremap k gk
 nnoremap <silent> <C-L> :set hlsearch!<CR>
