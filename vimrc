@@ -73,7 +73,7 @@ cmap cd. cd %:p:h
 cmap lcd. lcd %:p:h
 cmap acki Ack -i 
 cmap ackf AckFile -i 
-cmap mkf wall \| make %:p
+cmap mkf wall \| make %:p:r
 cmap mkp wall \| make
 nnoremap j gj
 nnoremap k gk
@@ -117,7 +117,7 @@ set history=1000
 let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="low"   "default value is normal
 let g:solarized_menu=0
-set background=light
+set background=dark
 colorscheme solarized
 
 " ctrlp options
