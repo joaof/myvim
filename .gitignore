@@ -1,1 +1,4 @@
 .netrwhist
+vimdata/undo/*
+vimdata/swap/*
+vimdata/backup/*
