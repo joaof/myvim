@@ -118,7 +118,7 @@ set history=1000
 let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="low"   "default value is normal
 let g:solarized_menu=0
-set background=light
+set background=dark
 colorscheme solarized
 
 " ctrlp options
