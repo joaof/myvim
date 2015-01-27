@@ -95,6 +95,7 @@ if has("statusline")
     set statusline=
     set statusline+=%-3.3n\                          " buffer number
     set statusline+=%f\                              " filename
+    set statusline+=%{fugitive#statusline()}         " git status line
     set statusline+=%h%m%r%w                         " status flags
     set statusline+=\[%{strlen(&ft)?&ft:'none'}]     " file type
     set statusline+=\[%{strlen(&fenc)?&fenc:'none'}] " file encoding
