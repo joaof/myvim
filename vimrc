@@ -50,7 +50,7 @@ set path+=**
 set switchbuf=useopen
 
 " Backup / Undo / Swap
-let s:dir = '~/.vim/vimdata' 
+let s:dir = '~/.vimdata' 
 if &directory =~# '^\.,'
     let &directory = expand(s:dir) . '/swap/,' . &directory
 endif
