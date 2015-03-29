@@ -71,8 +71,8 @@ au BufWritePre * let &bex = '-' . strftime("%Y%m%dT%H%M%S")
 " Maps / Leader
 cmap cd. cd %:p:h
 cmap lcd. lcd %:p:h
-cmap agi Ag -i
-cmap agf AgFile -i
+cmap agi Ag -i 
+cmap agf AgFile -i 
 cmap mkf wall \| make %:p:r
 cmap mkp wall \| make %:p
 cmap mkm wall \| make
