@@ -38,6 +38,7 @@ set ignorecase
 set showcmd
 set hidden
 set wildmenu
+set wildmode=longest:full,full
 set nowrap
 set path+=**
 
@@ -109,7 +110,7 @@ endif
 if has('win32')
     set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
 else
-    set guifont=Bitstream\ Vera\ Sans\ Mono\ 11
+    set guifont=Oxygen\ Mono\ 11
 endif
 
 " History
@@ -119,7 +120,7 @@ set history=1000
 let g:solarized_contrast="high"    "default value is normal
 let g:solarized_visibility="low"   "default value is normal
 let g:solarized_menu=0
-set background=dark
+set background=light
 colorscheme solarized
 
 " ctrlp options
