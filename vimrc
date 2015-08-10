@@ -108,7 +108,7 @@ endif
 
 " Font
 if has('win32')
-    set guifont=Bitstream_Vera_Sans_Mono:h10:cANSI
+    set guifont=Ubuntu_Mono:h11:cANSI
 else
     set guifont=Oxygen\ Mono\ 11
 endif
